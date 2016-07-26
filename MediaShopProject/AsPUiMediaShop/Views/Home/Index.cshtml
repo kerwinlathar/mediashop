@@ -1,7 +1,11 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
+﻿@model AsPUiMediaShop.Models.indexModel
 
 <h1>Welcome to Bilbo's Media Shop</h1>
 <h2>To go on an adventure with out leaving your front door</h2>
+
+<button>@Html.ActionLink("Login Page", "Login")</button>
+
+@foreach (MediaShopLibary.Books book in Model.booklist)
+{
+    @Html.Partial("booklistPartialView", book)
+}

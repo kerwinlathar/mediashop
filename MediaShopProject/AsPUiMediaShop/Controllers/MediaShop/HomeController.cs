@@ -1,4 +1,5 @@
-﻿using MediaShopLibary;
+﻿using AsPUiMediaShop.Models;
+using MediaShopLibary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,18 +12,22 @@ namespace AsPUiMediaShop.Controllers.MediaShop
     {
         private static int customerId;
         private CustomerController custcontrol;
+        private ItemController itemcontrol;
+
 
 
         public HomeController()
         {
             this.custcontrol = new CustomerController(new ModelMediaShopData());
-            
+            this.itemcontrol = new ItemController(new ModelMediaShopData());
         }
         // GET: Home
         public ActionResult Index()
         {
+            indexModel model = new indexModel(); 
+           model.booklist = itemcontrol.GetAllBooks();
 
-            return View();
+            return View(model);
         }
 
         public ActionResult Login()
@@ -59,6 +64,12 @@ namespace AsPUiMediaShop.Controllers.MediaShop
             }
             return PartialView("LoginPartialView", null);
         }
+
+        //public PartialViewResult booklistMethod()
+        //{
+        //    List<Books> booklist = itemcontrol.GetAllBooks();
+            
+        //}
 
     }
 }
