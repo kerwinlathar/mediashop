@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Login";
+
+}
+
+<h2>Login</h2>
+<div id="loginupdate"></div>
+
+@using (Ajax.BeginForm("LoginMethod","Home",new AjaxOptions
+{
+    HttpMethod ="GET",
+    UpdateTargetId= "loginupdate",
+    InsertionMode = InsertionMode.Replace
+}))
+{ 
+
+    @Html.TextBox("_name")
+    @Html.TextBox("_password")
+    <input type="submit" />
+}

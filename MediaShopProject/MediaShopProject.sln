@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaShopProject", "MediaShopProject\MediaShopProject.csproj", "{C4AEBAC6-2BC4-4C89-9F00-C50B1BA1D8D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaShopLibary", "MediaShopLibary\MediaShopLibary.csproj", "{E41B1F60-51D0-48C9-879B-9D0682709D5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaShopLiabryTest", "MediaShopLiabryTest\MediaShopLiabryTest.csproj", "{52733EC9-5B77-4383-84C0-1AEF34F910CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7D9963F1-0A7D-4DEC-8E23-404FB9107BEA}"
+	ProjectSection(SolutionItems) = preProject
+		OpenCoverTest.bat = OpenCoverTest.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6D6ACDD3-A053-4C20-9008-95AD705A503C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaShopWpfUi", "MediaShopWpfUi\MediaShopWpfUi.csproj", "{0D97AFE1-BCDB-4137-91FE-03BEA0587F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsPUiMediaShop", "AsPUiMediaShop\AsPUiMediaShop.csproj", "{52D3FC7C-92FC-429D-822B-B5944B82FC2D}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4AEBAC6-2BC4-4C89-9F00-C50B1BA1D8D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AEBAC6-2BC4-4C89-9F00-C50B1BA1D8D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AEBAC6-2BC4-4C89-9F00-C50B1BA1D8D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AEBAC6-2BC4-4C89-9F00-C50B1BA1D8D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41B1F60-51D0-48C9-879B-9D0682709D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41B1F60-51D0-48C9-879B-9D0682709D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41B1F60-51D0-48C9-879B-9D0682709D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41B1F60-51D0-48C9-879B-9D0682709D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52733EC9-5B77-4383-84C0-1AEF34F910CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52733EC9-5B77-4383-84C0-1AEF34F910CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52733EC9-5B77-4383-84C0-1AEF34F910CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52733EC9-5B77-4383-84C0-1AEF34F910CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D97AFE1-BCDB-4137-91FE-03BEA0587F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D97AFE1-BCDB-4137-91FE-03BEA0587F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D97AFE1-BCDB-4137-91FE-03BEA0587F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D97AFE1-BCDB-4137-91FE-03BEA0587F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52D3FC7C-92FC-429D-822B-B5944B82FC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D3FC7C-92FC-429D-822B-B5944B82FC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D3FC7C-92FC-429D-822B-B5944B82FC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D3FC7C-92FC-429D-822B-B5944B82FC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

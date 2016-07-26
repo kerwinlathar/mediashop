@@ -1,0 +1,23 @@
+﻿<Page x:Class="MediaShopWpfUi.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:pgl="clr-namespace:MediaShopWpfUi.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="525"
+	Title="HomePage">
+    <Page.DataContext>
+        <pgl:PagesLocationViewModel/>
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Bilbo's Media Shop" FontSize=" 34"/>
+        </StackPanel>
+    </Grid>
+</Page>
