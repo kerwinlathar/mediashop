@@ -13,6 +13,7 @@ namespace AsPUiMediaShop.Controllers.MediaShop
         private static int customerId;
         private CustomerController custcontrol;
         private ItemController itemcontrol;
+        private QuantityControler quantcontrol;
 
 
 
@@ -20,6 +21,7 @@ namespace AsPUiMediaShop.Controllers.MediaShop
         {
             this.custcontrol = new CustomerController(new ModelMediaShopData());
             this.itemcontrol = new ItemController(new ModelMediaShopData());
+            this.quantcontrol = new QuantityControler(new ModelMediaShopData());
         }
         // GET: Home
         public ActionResult Index()
@@ -28,6 +30,14 @@ namespace AsPUiMediaShop.Controllers.MediaShop
            model.booklist = itemcontrol.GetAllBooks();
 
             return View(model);
+        }
+
+        public ActionResult DVD()
+        {
+            dvdModel model = new dvdModel();
+            model.dvdlist = itemcontrol.GetAllDVDs();
+            return View(model);
+
         }
 
         public ActionResult Login()
@@ -65,10 +75,32 @@ namespace AsPUiMediaShop.Controllers.MediaShop
             return PartialView("LoginPartialView", null);
         }
 
+        public  PartialViewResult BuyBookMethod(int _id)
+        {
+            if (Request.IsAjaxRequest() && customerId > 0)
+            {
+                ViewBag.bookprice = quantcontrol.OrderBook(_id, customerId);
+                return PartialView("BookPriceView", null);
+            }
+
+            else { return PartialView("failView", null); }
+        }
+
+        public PartialViewResult BuydvdMethod(int _id)
+        {
+            if (Request.IsAjaxRequest() && customerId > 0)
+            {
+                ViewBag.dvdprice = quantcontrol.OrderDvd(_id, customerId); 
+                return PartialView("dvdpriceView", null);
+            }
+
+            else { return PartialView("failView", null); }
+        }
+
         //public PartialViewResult booklistMethod()
         //{
         //    List<Books> booklist = itemcontrol.GetAllBooks();
-            
+
         //}
 
     }

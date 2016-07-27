@@ -1,17 +1,22 @@
-﻿@model AsPUiMediaShop.Models.indexModel
+﻿
+@{
+    ViewBag.Title = "Dvd";
+}
+
+@model AsPUiMediaShop.Models.dvdModel
 
 <h1>Welcome to Bilbo's Media Shop</h1>
 <h2>To go on an adventure with out leaving your front door</h2>
 
 <button>@Html.ActionLink("Login Page", "Login")</button>
-<button>@Html.ActionLink("Dvd Page", "DVD")</button>
+<button>@Html.ActionLink("Book Page", "Index")</button>
 
-@foreach (MediaShopLibary.Books book in Model.booklist)
+@foreach (MediaShopLibary.DVD dvd in Model.dvdlist)
 {
-    @Html.Partial("booklistPartialView", book)
+    @Html.Partial("dvdistPartialView", dvd)
 }
 
-@using (Ajax.BeginForm("BuyBookMethod", "Home", new AjaxOptions
+@using (Ajax.BeginForm("BuydvdMethod", "Home", new AjaxOptions
 {
     HttpMethod = "GET",
     UpdateTargetId = "pricereturn",
@@ -24,3 +29,4 @@
 }
 
 <div id="pricereturn"></div>
+
